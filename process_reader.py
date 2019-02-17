@@ -1,5 +1,6 @@
 #!/usr/bin/python3.6
 #source: https://thispointer.com/python-get-list-of-all-running-processes-and-sort-by-highest-memory-usage/
+#source: https://pypi.org/project/psutil/
 import psutil
 
 def main():
@@ -24,15 +25,24 @@ def list_running_processes():
 
 def list_running_threads():
     print("List all the running threads within process boundary.\n")
+    for process in psutil.process_iter():
+            print("name:", process.name())
+            print("num threads:", process.num_threads())
+            print("threads:", process.threads())
 
 def list_loaded_modules():
     print("Enumerate all the loaded modules within the processes.\n")
+    for process in psutil.process_iter():
+        print("name:", process.name())
 
 def list_executable_pages():
     print("Is able to show all the executable pages within the processes.\n")
 
 def read_memory():
     print("Gives us a capability to read the memory.\n")
+    for process in psutil.process_iter():
+        print("name:", process.name())
+        print(process.memory_info())
 
 if __name__ == "__main__":
     main()
