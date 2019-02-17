@@ -7,6 +7,8 @@
     `sudo apt install python3-pip`
 - psutil
     `python3 -m pip install psutil`
+- texttable
+    `pip3 install texttable`
 
 ## Usage
 In a separate shell, run the Spawn Threads program to see threads: `./spawn_threads.py`
