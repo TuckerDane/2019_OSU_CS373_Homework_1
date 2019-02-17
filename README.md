@@ -7,3 +7,6 @@
     `sudo apt install python3-pip`
 - psutil
     `python3 -m pip install psutil`
+
+## Usage
+`sudo ./process_reader.py`
