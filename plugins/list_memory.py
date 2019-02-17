@@ -4,5 +4,5 @@
 import psutil
 from texttable import Texttable
 
-def get_memory():
+def list_memory():
     print("read the memory.")

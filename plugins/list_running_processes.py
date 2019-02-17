@@ -5,9 +5,10 @@
 import psutil
 from texttable import Texttable
 
-def get_running_processes():
-    t = Texttable()
-    t.add_rows([['PID', 'Process Name']])
+def list_running_processes():
+    print("\nRunning Processes:")
+    running_processes = Texttable()
+    running_processes.add_rows([['PID', 'Process Name']])
     for process in psutil.process_iter():
-        t.add_row([process.pid, process.name()])
-    return t
+        running_processes.add_row([process.pid, process.name()])
+    print(running_processes.draw())

@@ -4,5 +4,5 @@
 import psutil
 from texttable import Texttable
 
-def get_executable_pages():
-    print("Is able to show all the executable pages within the processes.")
+def list_loaded_modules():
+    print("Enumerate all the loaded modules within the processes.")
