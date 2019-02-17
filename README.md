@@ -9,4 +9,5 @@
     `python3 -m pip install psutil`
 
 ## Usage
-`sudo ./process_reader.py`
+In a separate shell, run the Spawn Threads program to see threads: `./spawn_threads.py`
+Run the process reader: `sudo ./process_reader.py`
