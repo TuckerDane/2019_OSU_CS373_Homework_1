@@ -30,32 +30,38 @@ def print_menu():
 def make_choice():
     choice = -1
     while choice is not 6:
-        choice = int(input("\nWhat would you like to do? "))
-        if not 1 <= choice <= 6:
-            print("\ninvalid choice")
-        if choice is 1:
-            list_running_processes()
-        if choice is 2:
-            pid = int(input("Which Process ID? "))
-            try:
-                list_running_threads(pid)
-            except:
-                print("no such process")
-        if choice is 3:
-            print("\nLoaded Modules:")
-            list_loaded_modules()
-        if choice is 4:
-            print("\nExecutable Pages:")
-            pid = int(input("Which Process ID? "))
-            try:
-                list_executable_pages(pid)
-            except:
-                print("no such process")
-        if choice is 5:
-            print("\nMemory:")
-            list_memory()
-        if choice is 6:
-            print("\nYou Quit!\n")
+        choice = input("\nWhat would you like to do? ")
+        try:
+            choice = int(choice)
+            if not 1 <= choice <= 6:
+                print("\ninvalid choice")
+            if choice is 1:
+                list_running_processes()
+            if choice is 2:
+                pid = int(input("Which Process ID? "))
+                try:
+                    list_running_threads(pid)
+                except:
+                    print("no such process")
+            if choice is 3:
+                print("\nLoaded Modules:")
+                list_loaded_modules()
+            if choice is 4:
+                print("\nExecutable Pages:")
+                pid = int(input("Which Process ID? "))
+                try:
+                    list_executable_pages(pid)
+                except:
+                    print("no such process")
+            if choice is 5:
+                print("\nMemory:")
+                list_memory()
+            if choice is 6:
+                print("\nYou Quit!\n")
+        except:
+            print("invalid input\n")
+            print_menu()
+        
         
 if __name__ == "__main__":
     main()
