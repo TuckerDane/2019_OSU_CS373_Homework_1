@@ -55,7 +55,8 @@ def make_choice():
                     print("no such process")
             if choice is 5:
                 print("\nMemory:")
-                list_memory()
+                address = int(input("Which Memory Address? "))
+                list_memory(address)
             if choice is 6:
                 print("\nYou Quit!\n")
         except:
