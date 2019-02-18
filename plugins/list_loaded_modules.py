@@ -5,7 +5,7 @@ import sys
 from texttable import Texttable
 
 def list_loaded_modules():
-    print("Enumerate all the loaded modules within the processes.")
+    print("Enumerate all the loaded modules within a processes.")
     loaded_modules = Texttable()
     loaded_modules.add_rows([['Module Name']])
     for module in sys.modules.keys():

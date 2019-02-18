@@ -36,13 +36,21 @@ def make_choice():
         if choice is 1:
             list_running_processes()
         if choice is 2:
-            list_running_threads()
+            pid = int(input("Which Process ID? "))
+            try:
+                list_running_threads(pid)
+            except:
+                print("no such process")
         if choice is 3:
             print("\nLoaded Modules:")
             list_loaded_modules()
         if choice is 4:
             print("\nExecutable Pages:")
-            list_executable_pages()
+            pid = int(input("Which Process ID? "))
+            try:
+                list_executable_pages(pid)
+            except:
+                print("no such process")
         if choice is 5:
             print("\nMemory:")
             list_memory()
